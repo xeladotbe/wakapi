@@ -1,7 +1,7 @@
 # To build locally: docker buildx build . -t wakapi --load
 
 # Preparation to save some time
-FROM --platform=$BUILDPLATFORM golang:1.17-alpine AS prep-env
+FROM --platform=linux/arm/v7 golang:1.17-alpine AS prep-env
 WORKDIR /src
 
 ADD ./go.mod .
